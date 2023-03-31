@@ -1,5 +1,5 @@
 # Usage
-# source copy.zsh
+# source install.zsh
 #
 # Purpose
 # Copy all the necessary dotfiles from your system to here

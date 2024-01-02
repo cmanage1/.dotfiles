@@ -1,4 +1,7 @@
 vim.g.mapleader = " "
+vim.g.maplocalleader = ' '
+vim.g.nofsync = true
+
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
 -- lets me move lines while highlighted with J and K
@@ -19,3 +22,8 @@ vim.keymap.set("x", "<leader>p", "\"_dP")
 -- leader and Y to copy into system register
 vim.keymap.set("n", "<leader>d", "\"_d")
 vim.keymap.set("v", "<leader>d", "\"_d")
+
+vim.keymap.set("n", "<C-l>", "<C-W><C-l>")
+vim.keymap.set("n", "<C-k>", "<C-W><C-k>")
+vim.keymap.set("n", "<C-j>", "<C-W><C-j>")
+vim.keymap.set("n", "<C-h>", "<C-W><C-h>")

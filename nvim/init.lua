@@ -1,7 +1,7 @@
 local Plug = vim.fn['plug#']
 
 -- ############## PLUGINGS START ###########################
-vim.call('plug#begin', '~/AppData/Local/nvim/plugged')
+vim.call('plug#begin', '~/.config/nvim/plugged')
 
 Plug('https://github.com/tc50cal/vim-terminal')
 Plug('nvim-lua/plenary.nvim')

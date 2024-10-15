@@ -9,6 +9,12 @@ Mostly for myself but feel free to use on your own
 - tmux >= 3.2
 
 # Instructions
+1. Install vim (if not installed already)
+2. Install neovim
+3. Install neovim plugins
+4. Install tmux
+5. Install tmux plugins
+
 - nvm (for pyright)
     - `nvm install --lts`
 - tmux
@@ -28,4 +34,6 @@ Mostly for myself but feel free to use on your own
 - nvim/
     - rose-pine + Plug
 - tmux/
+- .vimrc
+    - sometimes you want to use lightweight vim :)
    

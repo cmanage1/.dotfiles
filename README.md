@@ -31,6 +31,7 @@ Mostly for myself but feel free to use on your own
 
 ## Included
 - .zshrc
+    - aliases
 - nvim/
     - rose-pine + Plug
 - tmux/

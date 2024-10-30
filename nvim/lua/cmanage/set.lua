@@ -2,10 +2,10 @@ vim.opt.number=true
 vim.opt.relativenumber=true
 
 vim.opt.autoindent=true
-vim.opt.tabstop=4
-vim.opt.shiftwidth=5
+vim.opt.tabstop=2
+vim.opt.shiftwidth=2
 vim.opt.smarttab=true
-vim.opt.softtabstop=4
+vim.opt.softtabstop=2
 vim.opt.mouse='a'
 
 vim.opt.hlsearch=false

@@ -30,11 +30,12 @@ Mostly for myself but feel free to use on your own
     - `:PlugInstall` right after opening neovim
 
 ## Included
+- .config/
+    - nvim/
+        - rose-pine + Plug
+    - tmux/
 - .zshrc
     - aliases
-- nvim/
-    - rose-pine + Plug
-- tmux/
 - .vimrc
     - sometimes you want to use lightweight vim :)
    

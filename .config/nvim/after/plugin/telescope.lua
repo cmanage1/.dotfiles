@@ -1,56 +1,51 @@
-local lsp_zero = require('lsp-zero').preset({
-	suggest_lsp_servers = true
-})
+local builtin = require('telescope.builtin')
 
-lsp_zero.on_attach(function(bufnr)
-  local opts = {buffer = bufnr, remap = false}
+vim.keymap.set('n', '<leader>pf', builtin.find_files, {})
+vim.keymap.set('n', '<leader>ps', builtin.live_grep, {})
+vim.keymap.set('n', '<leader>pb', builtin.buffers, {})
+vim.keymap.set('n', '<leader>ph', builtin.help_tags, {})
+vim.keymap.set('n', '<leader>pg', builtin.git_files, {})
 
-  vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
-  vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end, opts)
-  vim.keymap.set("n", "<leader>vws", function() vim.lsp.buf.workspace_symbol() end, opts)
-  vim.keymap.set("n", "<leader>vd", function() vim.diagnostic.open_float() end, opts)
-  vim.keymap.set("n", "]d", function() vim.diagnostic.goto_next() end, opts)
-  vim.keymap.set("n", "[d", function() vim.diagnostic.goto_prev() end, opts)
-  vim.keymap.set("n", "<leader>vca", function() vim.lsp.buf.code_action() end, opts)
-  vim.keymap.set("n", "<leader>vrr", function() vim.lsp.buf.references() end, opts)
-  vim.keymap.set("n", "<leader>vrn", function() vim.lsp.buf.rename() end, opts)
-  vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
-end)
+local actions = require("telescope.actions")
 
-require('mason').setup({})
-require('mason-lspconfig').setup({
-  ensure_installed = {'ts_ls'},
-  handlers = {
-    lsp_zero.default_setup,
-    lua_ls = function()
-      local lua_opts = lsp_zero.nvim_lua_ls()
-      require('lspconfig').lua_ls.setup(lua_opts)
-    end,
+require('telescope').setup{
+  defaults = {
+		-- Default configuration for telescope goes here:
+    -- config_key = value,
+    mappings = {
+      i = {
+        -- map actions.which_key to <C-h> (default: <C-/>)
+        -- actions.which_key shows the mappings for your picker,
+        -- e.g. git_{create, delete, ...}_branch for the git_branches picker
+				["<C-k>"] = actions.move_selection_previous,
+        ["<C-j>"] = actions.move_selection_next,
+      },
+      n = {
+        -- map actions.which_key to <C-h> (default: <C-/>)
+        -- actions.which_key shows the mappings for your picker,
+        -- e.g. git_{create, delete, ...}_branch for the git_branches picker
+				["<C-k>"] = actions.move_selection_previous,
+        ["<C-j>"] = actions.move_selection_next,
+      }
+    }
+  },
+  pickers = {
+    -- Default configuration for builtin pickers goes here:
+    -- picker_name = {
+    --   picker_config_key = value,
+    --   ...
+    -- }
+    -- Now the picker_config_key will be applied every time you call this
+    -- builtin picker
+  },
+  extensions = {
+    -- Your extension configuration goes here:
+    -- extension_name = {
+    --   extension_config_key = value,
+    -- }
+    -- please take a look at the readme of the extension you want to configure
   }
-})
+}
 
-local cmp = require('cmp')
-local cmp_select = {behavior =cmp.SelectBehavior.Select}
-cmp.setup({
-   sources = {
-     {name = 'path'},
-     {name = 'nvim_lsp'},
-     {name = 'nvim_lua'},
-     {name = 'luasnip', keyword_length = 2},
-     {name = 'buffer', keyword_length = 3},
-   },
-   formatting = lsp_zero.cmp_format(),
-   mapping = cmp.mapping.preset.insert({
-     ['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
-     ['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
-     ['<C-y>'] = cmp.mapping.confirm({ select = true }),
-     ['<C-Space>'] = cmp.mapping.complete(),
-   }),
-})
-
-vim.diagnostic.config({
-	 virtual_text = false,
-	 virtual_lines = false,
-})
 
 

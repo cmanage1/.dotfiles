@@ -8,8 +8,12 @@ Plug('nvim-lua/plenary.nvim')
 Plug('nvim-telescope/telescope.nvim', { tag = '0.1.5' })
 Plug('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate'})
 Plug('rose-pine/neovim', {branch = 'main'})-- Colorscheme
+
 Plug('vim-airline/vim-airline')
 
+-- Buffer bar to simulate tabs
+Plug('nvim-tree/nvim-web-devicons')
+Plug('akinsho/bufferline.nvim', { tag = '*'} )
 
 -- LSP Support
 Plug('neovim/nvim-lspconfig')

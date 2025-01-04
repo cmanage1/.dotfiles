@@ -8,6 +8,12 @@ Mostly for myself but feel free to use on your own
 - node, npm, and nvm (for lsp)
 - tmux >= 3.2
 
+### Mac Specific
+- For icons in buffer bar above
+    - Install [Hack Nerd Font](https://www.nerdfonts.com/font-downloads)
+    - Install iTerm2
+        - Preferences > Select Profile > Text > Change "Font" to Hack Nerd Font Regular
+
 # Instructions
 1. Install vim (if not installed already)
 2. Install neovim

@@ -64,6 +64,7 @@ ask_user_nvim_cfg() {
     esac
   done
 }
+echo "This script will install all of my dotfiles"
 
 ask_user_install "Do you want to install tmux and nvim?"
 

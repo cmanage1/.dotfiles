@@ -27,3 +27,15 @@ vim.keymap.set("n", "<C-l>", "<C-W><C-l>")
 vim.keymap.set("n", "<C-k>", "<C-W><C-k>")
 vim.keymap.set("n", "<C-j>", "<C-W><C-j>")
 vim.keymap.set("n", "<C-h>", "<C-W><C-h>")
+
+-- For bufferline tab navigation
+vim.keymap.set("n", "<leader>1", "<Cmd>BufferLineGoBuffer 1<CR>")
+vim.keymap.set("n", "<leader>2", "<Cmd>BufferLineGoBuffer 2<CR>")
+vim.keymap.set("n", "<leader>3", "<Cmd>BufferLineGoBuffer 3<CR>")
+vim.keymap.set("n", "<leader>4", "<Cmd>BufferLineGoBuffer 4<CR>")
+vim.keymap.set("n", "<leader>5", "<Cmd>BufferLineGoBuffer 5<CR>")
+vim.keymap.set("n", "<leader>6", "<Cmd>BufferLineGoBuffer 6<CR>")
+
+-- For dynamic navivation
+vim.keymap.set("n", "<leader>b", "<Cmd>BufferLineCycleNext<CR>")
+vim.keymap.set("n", "<leader>n", "<Cmd>BufferLineCyclePrev<CR>")

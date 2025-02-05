@@ -31,6 +31,7 @@ Plug('hrsh7th/cmp-path')
 Plug('saadparwaiz1/cmp_luaSnip')
 Plug('hrsh7th/cmp-nvim-lua')
 
+-- Plugin for navigation with tmux
 Plug('christoomey/vim-tmux-navigator')
 
 Plug('L3MON4D3/LuaSnip')

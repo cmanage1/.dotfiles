@@ -9,6 +9,7 @@ Plug('nvim-telescope/telescope.nvim', { tag = '0.1.5' })
 Plug('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate'})
 Plug('rose-pine/neovim', {branch = 'main'})-- Colorscheme
 
+-- bottom bar
 Plug('vim-airline/vim-airline')
 
 -- Buffer bar to simulate tabs
@@ -29,6 +30,8 @@ Plug('hrsh7th/cmp-buffer')
 Plug('hrsh7th/cmp-path')
 Plug('saadparwaiz1/cmp_luaSnip')
 Plug('hrsh7th/cmp-nvim-lua')
+
+Plug('christoomey/vim-tmux-navigator')
 
 Plug('L3MON4D3/LuaSnip')
 Plug('rafamadriz/friendly-snippets')

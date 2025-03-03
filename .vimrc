@@ -14,6 +14,10 @@ set relativenumber
 set listchars=tab:>-,nbsp:-
 set list
 
+syntax on
+colorscheme elflord
+
+"****************** Optional ********************************
 set nocompatible " Wanted by Plug
 
 " restore cursor to last position in file:
